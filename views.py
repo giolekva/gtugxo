@@ -95,29 +95,11 @@ class MoveHandler(GameHandler):
             self.error(403)
 
 
-class HangoutHandler(GameHandler):
-    def Handle(self):
-        player_id = 0
-        if self._board:
-            player_id = self._board.Join(self._user)
-        if player_id:
-            game_manager.Save(self._board)
-            channel_token = channel.create_channel(
-                '%s__%s' % (self._board.Id(), player_id))
-            self._RenderTemplate('gadget.xml', {
-                    'board_id': self._board.Id(),
-                    'player_id': player_id,
-                    'channel_token': channel_token})
-        else:
-            self.error(403)
-
-
 def main():
     run_wsgi_app(webapp.WSGIApplication([
                 ('/', NewGameHandler),
                 ('/game/.*', JoinGameHandler),
-                ('/move?.*', MoveHandler),
-                ('/hangout', HangoutHandler)]))
+                ('/move?.*', MoveHandler)]))
 
 
 if __name__ == "__main__":
