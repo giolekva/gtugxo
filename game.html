@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>GTUG - XO</title>
+  <link href="/xo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="/">New</a><br/>
+<table id="board">
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+<script type="text/javascript" language="javascript">
+  var board_id="{{ board_id|escape }}";
+  var player_id="{{ player_id|escape }}";
+  var channel_token="{{ channel_token|escape }}";
+</script>
+<script type="text/javascript" language="javascript" src="/xo.js"></script>
+</body>
+</html>

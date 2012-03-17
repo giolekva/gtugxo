@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="GTUG XO">
+    <Require feature="rpc"/>
+    <Require feature="views"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=0.2"></script>
+	  {% include "game.html" %}
+    ]]>
+  </Content>
+</Module>

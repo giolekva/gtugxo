@@ -1,0 +1,16 @@
+application: gtugxo
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /xo\.css
+  static_files: xo.css
+  upload: xo\.css
+
+- url: /xo\.js
+  static_files: xo.js
+  upload: xo\.js
+
+- url: /.*
+  script: views.py
