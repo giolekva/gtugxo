@@ -29,7 +29,6 @@
 				url: '/move',
 				data: {
 					'id': board_id,
-					'player_id': player_id,
 					'x': x,
 					'y': y},
 			}).done(function(data) {

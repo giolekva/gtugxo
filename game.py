@@ -19,10 +19,10 @@ class Game(object):
 
     def Join(self, player):
         if self._first_player is None:
-            self._first_player = '1'
+            self._first_player = player
             return 1
         if self._second_player is None:
-            self._second_player = '2'
+            self._second_player = player
             return 2
         return 0
 
