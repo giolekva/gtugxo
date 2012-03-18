@@ -69,7 +69,8 @@ class JoinGameHandler(GameHandler):
                 '%s__%s' % (self._board.Id(), self._user))
             self._RenderTemplate('game.html', {
                     'board_id': self._board.Id(),
-                    'channel_token': channel_token})
+                    'channel_token': channel_token,
+                    'logout_url': users.create_logout_url('/')})
         else:
             self.error(403)
 
